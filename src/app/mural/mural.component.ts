@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Mural } from '../mural';
+import { MuralService } from '../muralservice.service';
 
 @Component({
   selector: 'app-mural',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mural.component.css']
 })
 export class MuralComponent implements OnInit {
+  mural: Mural;
+  
 
-  constructor() { }
+  constructor(private muralservice: MuralService) { }
 
-  ngOnInit() {
+   ngOnInit(){ }
+  //   this.muralservice.findMural().subscribe({
+  //     next: mural => this.mural = mural,
+  //     erro: err => this.errorMessage = err
+  //   });
+  // }
+
   }
-
-}

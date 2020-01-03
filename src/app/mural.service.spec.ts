@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MuralService } from './mural.service';
+import { MuralService } from './muralservice.service';
 
 describe('MuralService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
