@@ -4,7 +4,7 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MuralComponent } from './mural/mural.component';
-import { MuralService } from './muralservice.service';
+import { MuralService } from './service/muralservice.service';
 
 @NgModule({
   declarations: [

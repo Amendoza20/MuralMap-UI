@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mural } from '../mural';
-import { MuralService } from '../muralservice.service';
+import { MuralService } from '../service/muralservice.service';
 
 @Component({
   selector: 'app-mural',

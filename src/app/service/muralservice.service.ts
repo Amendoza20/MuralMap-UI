@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Mural } from './mural';
+import { Mural } from '../mural';
 import { environment } from 'src/environments/environment';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
@@ -12,11 +12,11 @@ export class MuralService {
 
   private path: string;
   constructor(private http: HttpClient) { 
-   // this.path = environment.serverURL + '/mural';
+   this.path = environment + '/mural';
   }
-  // addMural(mural: Mural): Observable <Mural> {
-  //   return this.http.post<Mural>(this.path + mural);
-  // }
+  addMural(mural: Mural): Observable <Mural> {
+    return this.http.post<Mural>(this.path + mural, mural) ;
+  }
   updateMural(mural: Mural){
     this.http.put<Mural>('/server/mural', mural);
   }
@@ -27,9 +27,9 @@ export class MuralService {
       catchError(this.handleError)
     );
   }
-  // deleteMural(id: number): Observable<boolean>{
-  //   return this.http.delete<Mural>(this.path + id);
-  // }
+  deleteMural(id: number){
+     this.http.delete<Mural>(this.path + id);
+  }
   private handleError(err: HttpErrorResponse){
     let errorMessage = ' ';
     if(err.error instanceof ErrorEvent) {
