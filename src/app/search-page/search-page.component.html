@@ -1,0 +1,15 @@
+<app-search></app-search>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let mural of murals">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-text">{{ mural.muralName }}</h3>
+                    <p class="card-text">
+                       Artist: {{ mural.artistName }} | Location: {{ mural.location }} | Genre: {{ mural.genre }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
