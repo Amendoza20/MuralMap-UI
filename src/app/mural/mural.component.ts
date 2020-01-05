@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Mural } from '../mural';
-import { MuralService } from '../service/muralservice.service';
-
+// import { MuralService } from '../service/muralservice.service';
+import { MOCKMURALS } from '../mural-mock';
 @Component({
   selector: 'app-mural',
   templateUrl: './mural.component.html',
   styleUrls: ['./mural.component.css']
 })
 export class MuralComponent implements OnInit {
-  mural: Mural;
-  
+  mural = MOCKMURALS[0];
 
-  constructor(private muralservice: MuralService) { }
+  constructor() { }
 
    ngOnInit(){ }
   //   this.muralservice.findMural().subscribe({
