@@ -2,6 +2,7 @@ import { Mural } from './mural';
 
 export const MOCKMURALS: Mural[] = [
     {
+        muralId: 1,
         muralName: "First Mural",
         artistName: "Justin",
         muralDescription: "A decent Mural",
@@ -9,6 +10,7 @@ export const MOCKMURALS: Mural[] = [
         genre: "Gay"
     },
     {
+        muralId: 2,
         muralName: "Second Mural",
         artistName: "Justin",
         muralDescription: "A better Mural",
@@ -16,6 +18,7 @@ export const MOCKMURALS: Mural[] = [
         genre: "Straight"
     },
     {
+        muralId: 3,
         muralName: "Third Mural",
         artistName: "Leland",
         muralDescription: "Honestly the best Mural",
@@ -23,6 +26,7 @@ export const MOCKMURALS: Mural[] = [
         genre: "Political",
     },
     {
+        muralId: 4,
         muralName: "Fourth Mural",
         artistName: "Leland",
         muralDescription: "A mural that speaks to the heart and soul of chiii making",
@@ -30,6 +34,7 @@ export const MOCKMURALS: Mural[] = [
         genre: "Food",
     },
     {
+        muralId: 5,
         muralName: "Fifth Mural",
         artistName: "Toni",
         muralDescription: "A mural about calling your mother",
