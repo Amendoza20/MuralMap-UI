@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 export class MuralService {
     private URL: string;
     private currentMural: Mural;
+    private mural: Mural;
 
 constructor(private httpClient: HttpClient){
     this.URL = environment.url + '/mural';
@@ -18,6 +19,10 @@ constructor(private httpClient: HttpClient){
 public getAllMurals(): Observable<Mural[]>{
     console.log(this.URL + '/getMurals');
     return this.httpClient.get<Mural[]>(this.URL + '/getMurals');
+}
+addMural(mural: Mural){
+    return this.httpClient.post(this.URL, mural)
+
 }
 getCurrentMural() {
     return this.currentMural;
