@@ -21,7 +21,7 @@ public getAllMurals(): Observable<Mural[]>{
     return this.httpClient.get<Mural[]>(this.URL + '/getMurals');
 }
 addMural(mural: Mural){
-    return this.httpClient.post(this.URL, mural)
+    return this.httpClient.post(this.URL, mural);
 
 }
 getCurrentMural() {

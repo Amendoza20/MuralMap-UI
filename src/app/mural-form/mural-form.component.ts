@@ -14,9 +14,15 @@ Mural: Mural;
     this.Mural = new Mural();
   }
 
-  // onFileChange(event){
-  //   this.file = event.target.files.item(0);
-  // }
+onSubmit(){
+  this.service.addMural(this.Mural).subscribe(data => {
+    console.log('Mural Saved');
+    alert("Mural Added Successfully.");
+    this.router.navigateByUrl('/mural');
+  }, error => {
+    console.log('Mural Failed to Save'); 
+  });
+}
 
 
   ngOnInit() {
