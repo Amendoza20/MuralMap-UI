@@ -2,21 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { Mural } from '../mural';
 // import { MuralService } from '../service/muralservice.service';
 import { MOCKMURALS } from '../mural-mock';
+import { MuralService } from '../service/muralservice.service';
 @Component({
   selector: 'app-mural',
   templateUrl: './mural.component.html',
   styleUrls: ['./mural.component.css']
 })
 export class MuralComponent implements OnInit {
-  mural = MOCKMURALS[0];
+  mural: Mural;
 
-  constructor() { }
+  constructor(private service: MuralService) { }
 
-   ngOnInit(){ }
-  //   this.muralservice.findMural().subscribe({
-  //     next: mural => this.mural = mural,
-  //     erro: err => this.errorMessage = err
-  //   });
-  // }
+   ngOnInit(){ 
+     this.mural = this.service.getCurrentMural();
+   }
+ 
 
   }

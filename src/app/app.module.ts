@@ -9,6 +9,8 @@ import { SearchComponent } from './search/search.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchCardComponent } from './search-card/search-card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserComponent } from './user/user.component';
+import { MuralFormComponent } from './mural-form/mural-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     SearchComponent,
     SearchPageComponent,
-    SearchCardComponent
+    SearchCardComponent,
+    UserComponent,
+    MuralFormComponent
   ],
   imports: [
     BrowserModule,

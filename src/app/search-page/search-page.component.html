@@ -4,7 +4,7 @@
         <div *ngFor="let mural of murals">
             <div class="card">
                 <div class="card-body">
-                    <h3 class="card-text">{{ mural.muralName }}</h3>
+                    <h3 class="card-text" (click)="onClick(mural)">{{ mural.muralName }}</h3>
                     <p class="card-text">
                        Artist: {{ mural.artistName }} | Location: {{ mural.location }} | Genre: {{ mural.genre }}
                     </p>
@@ -13,3 +13,5 @@
         </div>
     </div>
 </div>
+<p *ngIf="murals == null">Failed Request</p>
+

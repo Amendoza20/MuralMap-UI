@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSubmit()" #videoForm="ngForm">
+    <div class="form-group">
+        <label for="name" style="color:white;">Mural Name</label>
+        <input type="text" [(ngModel)]="mural.muralName"
+                class="form-control" id="name" name="name" placeholder="Enter in Mural Name."
+                required #name="ngModel">
+    </div>
+    <div class="form-group">
+        <label for="artist" style="color:white;">Artist Name</label>
+        <input type="text" [(ngModel)]="mural.artistName"
+                class="form-control" id="artist" name="artist" placeholder="Enter in Mural Artist's Name."
+                required #name="ngModel">
+    </div>
+    <div class="form-group">
+        <label for="description" style="color:white;">Mural Description</label>
+        <textarea type="text" [(ngModel)]="mural.muralDescription"
+                class="form-control" id="description" name="description" 
+                rows="6"
+                placeholder="Please enter a description for this mural"
+                required #description="ngModel">
+        </textarea>
+    </div>
+    <div class="form-group">
+        <label for="location" style="color:white;">Mural Location</label>
+        <textarea type="text" [(ngModel)]="mural.muralLocation"
+                class="form-control" id="location" name="location" 
+                rows="6"
+                placeholder="Please enter in best location for this mural"
+                required #description="ngModel">
+        </textarea>
+    </div>
+    <div class="form-group">
+        <label for="genre" style="color:white;">Mural Name</label>
+        <input type="text" [(ngModel)]="mural.genre"
+                class="form-control" id="genre" name="genre" placeholder="Enter in a Genre For The Mural."
+                required #name="ngModel">
+    </div>
+    <div>
+        <!-- <input (change)="onFileChange($event)" type="file" name="fileUpload" id="fileUpload"> -->
+        <button type="submit" [disabled]="!videoForm.form.valid" class="btn btn-info">Save!</button> 
+    </div>
+</form>
